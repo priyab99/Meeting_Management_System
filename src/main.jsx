@@ -18,7 +18,6 @@ import SendInvitation from "./Pages/Meeting/SendInvitation";
 
 const App = () => {
   const [authToken, setAuthToken] = useState(localStorage.getItem('authToken'));
-  //console.log("tokkkkken: ",authToken);
 
   useEffect(() => {
     const token = localStorage.getItem('authToken');
