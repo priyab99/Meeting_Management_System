@@ -30,9 +30,7 @@ const MeetingList = () => {
   useEffect(() => {
     const fetchMeetings = async () => {
       try {
-        
-        const response = await axios.get(
-          `${base_url}/api/meeting/meetingInfo`
+
         );
         if (response.data && Array.isArray(response.data)) {
           const sortedMeetings = response.data.sort(
