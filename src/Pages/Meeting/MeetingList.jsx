@@ -30,16 +30,7 @@ const MeetingList = () => {
   useEffect(() => {
     const fetchMeetings = async () => {
       try {
-        const token = localStorage.getItem("authToken");
-        const userResponse = await axios.get(`${base_url}/api/myInfo`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
 
-        const user_id = userResponse.data?.user?.user_id;
-        const response = await axios.get(
-          `${base_url}/api/meeting/user-meeting-info/${user_id}`
         );
         if (response.data && Array.isArray(response.data)) {
           const sortedMeetings = response.data.sort(
